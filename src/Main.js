@@ -14,7 +14,7 @@ class Main extends Component {
                             <img className="content-text-logo" src={logoImg} />
                         </div>
                         <div className="two">
-                            <span ><img className="search-icon" src="https://webstockreview.net/images/search-icon-png-9.png"/></span>
+                            <span><img className="search-icon" src="https://webstockreview.net/images/search-icon-png-9.png" /></span>
                             <input className="search" type="text" placeholder="검색" />
                         </div>
                         <div className="three">
@@ -26,7 +26,7 @@ class Main extends Component {
                 </nav>
 
                 <div className="main">
-        
+
                     <div className="feeds">
                         <article>
                             <header>
@@ -42,7 +42,7 @@ class Main extends Component {
                                 </div>
                             </header>
                             <div className="main-img-container">
-                                <img className="main-img" 
+                                <img className="main-img"
                                     src="https://img.travelawaits.com/quill/f/c/f/6/b/b/fcf6bb1ba5b6ccf979f1932366f5c53ad7c13745.jpg" />
                             </div>
                             <div className="emotion">
@@ -70,10 +70,10 @@ class Main extends Component {
                             </div>
                         </article>
                     </div>
-        
+
                     <div className="main-right">
                         <div className="mine">
-                            <img src="https://pbs.twimg.com/profile_images/1109389733912666112/XX55fTPf.jpg"/>
+                            <img src="https://pbs.twimg.com/profile_images/1109389733912666112/XX55fTPf.jpg" />
                             <div className="mine-container">
                                 <p className="mine-name">wecode_bootcamp</p>
                                 <p className="mine-kor-name">WeCode | 위코드</p>
@@ -109,7 +109,7 @@ class Main extends Component {
                                         <p className="recommend-follow">ab_님이 팔로우합니다</p>
                                     </div>
                                 </div>
-                                <div> 
+                                <div>
                                     <button className="recommend-button">팔로우</button>
                                 </div>
                             </div>
@@ -123,9 +123,9 @@ class Main extends Component {
                             <p>© 2020 WESTAGRAM FROM WECODE</p>
                         </div>
 
-                </div>
+                    </div>
 
-            </div>
+                </div>
             </div>
         );
     };
