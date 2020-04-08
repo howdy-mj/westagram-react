@@ -1,0 +1,28 @@
+import React, { Component } from 'react';
+import './Login.css'
+
+class Login extends Component {
+
+    render() {
+
+        return (
+            <div>
+                <div className="login-container">
+                    <div className="login-logo">
+                        <img src="../img/logo_text.png" />
+                    </div>
+                    <div className="login-input">
+                        <input className="id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
+                        <input className="pw" type="password" placeholder="비밀번호" />
+                        <button id="login-btn">로그인</button>
+                    </div>
+                    <div className="forgot">
+                        <p>비밀번호를 잊으셨나요?</p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default Login;
