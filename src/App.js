@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 // import Login from './Login';
-import Main from './Main';
+import Mainpage from './Mainpage';
 
 class App extends Component {
 
   render() {
     return (
       // <Login />
-      <Main />
+      <Mainpage />
     );
   }
 }
