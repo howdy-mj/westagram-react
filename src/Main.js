@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Main.css';
+import logoImg from './img/logo_text.png';
 
 class Main extends Component {
 
@@ -10,7 +11,7 @@ class Main extends Component {
                     <div className="content">
                         <div className="one">
                             <img className="content-img-logo" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/logo.png" />
-                            <img className="content-text-logo" src="../img/logo_text.png" />
+                            <img className="content-text-logo" src={logoImg} />
                         </div>
                         <div className="two">
                             <span ><img className="search-icon" src="https://webstockreview.net/images/search-icon-png-9.png"/></span>
@@ -40,8 +41,10 @@ class Main extends Component {
                                     <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/more.png" />
                                 </div>
                             </header>
-                            <img className="main-img" 
-                                src="https://img.travelawaits.com/quill/f/c/f/6/b/b/fcf6bb1ba5b6ccf979f1932366f5c53ad7c13745.jpg" />
+                            <div className="main-img-container">
+                                <img className="main-img" 
+                                    src="https://img.travelawaits.com/quill/f/c/f/6/b/b/fcf6bb1ba5b6ccf979f1932366f5c53ad7c13745.jpg" />
+                            </div>
                             <div className="emotion">
                                 <div class="emo-left">
                                     <span className="emo-left-heart"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" /></span>
@@ -85,8 +88,10 @@ class Main extends Component {
                             <div className="friend">
                                 <img src="https://i.pinimg.com/originals/f1/6c/ea/f16ceafdbb590986dd6dc63e8c87cc67.jpg" />
                                 <div className="friend-info">
-                                    <p className="friend-name">Welsh Corgi</p>
-                                    <p className="friend-last-login">10분 전</p>
+                                    <div className="friend-more-info">
+                                        <p className="friend-name">Welsh Corgi</p>
+                                        <p className="friend-last-login">10분 전</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -99,8 +104,10 @@ class Main extends Component {
                             <div className="recommend">
                                 <img src="https://www.abc.net.au/news/image/10477576-3x2-940x627.jpg" />
                                 <div className="recommend-info">
-                                    <p className="recommend-name">abcde</p>
-                                    <p className="recommend-follow">ab_님이 팔로우합니다</p>
+                                    <div className="recomment-info-more">
+                                        <p className="recommend-name">abcde</p>
+                                        <p className="recommend-follow">ab_님이 팔로우합니다</p>
+                                    </div>
                                 </div>
                                 <div> 
                                     <button className="recommend-button">팔로우</button>

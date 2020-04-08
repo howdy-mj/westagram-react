@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import './Login.css'
+import './Login.css';
+import logoImg from './img/logo_text.png';
 
 class Login extends Component {
 
     render() {
-
         return (
             <div>
                 <div className="login-container">
                     <div className="login-logo">
-                        <img src="../img/logo_text.png" />
+                        <img src={logoImg} />
                     </div>
                     <div className="login-input">
                         <input className="id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
