@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import './Login.css';
-import LoginInput from './components/LoginInput';
-import logoImg from './img/logo_text.png';
+import logoImg from '../img/logo_text.png';
 
 class Login extends Component {
     constructor(props) {
-        super(props)
+        super(props);
 
         this.state = {
-            
+            idValue: '',
+            pwValue: '',
         }
+        this.handleIDInput = this.handleIDInput.bind(this);
+        this.handlePWInput = this.handlePWInput.bind(this);
+    }
+
+    handleIDInput(e) {
+        this.setState({
+            idValue: e.target.value,
+        })
+    }
+    handlePWInput(e) {
+        this.setState({
+            pwValue: e.target.value,
+        })
     }
 
     render() {
@@ -19,7 +33,30 @@ class Login extends Component {
                     <div className="login-logo">
                         <img src={logoImg} />
                     </div>
-                    <LoginInput />
+
+                    <div className="login-input">
+                        <input
+                            className="id"
+                            type="text"
+                            placeholder="전화번호, 사용자 이름 또는 이메일"
+                            value={this.state.idValue}
+                            onChange={this.handleIDInput}
+                        />
+                        <input
+                            className="pw"
+                            type="password"
+                            placeholder="비밀번호"
+                            value={this.state.pwValue}
+                            onChange={this.handlePWInput}
+                        />
+                        <button
+                            className={
+                                (this.state.idValue.length > 0 && this.state.pwValue.length > 0) ?
+                                    "login-btn activate" : "login-btn"
+                            }
+                        >로그인</button>
+                    </div>
+
                     <div className="forgot">
                         <p>비밀번호를 잊으셨나요?</p>
                     </div>
