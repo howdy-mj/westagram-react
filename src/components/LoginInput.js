@@ -24,13 +24,8 @@ class LoginInput extends Component {
         })
     }
 
-    changeColor() {
-        this.state.idValue.length > 0 && this.state.pwValue.length > 0 ?
-            console.log('1이상') :
-            console.log('비어있음');
-    }
-
     render() {
+        console.log('rendered');
         return (
             <div className="login-input">
                 <input
@@ -48,9 +43,11 @@ class LoginInput extends Component {
                     onChange={this.handlePWInput}
                 />
                 <button 
-                    className="login-btn"
+                    className={
+                        (this.state.idValue.length > 0 && this.state.pwValue.length > 0) ?
+                        "login-btn activate" : "login-btn"
+                    }
                 >로그인</button>
-                {/* {this.changeColor()}; */}
             </div>
         );
     }

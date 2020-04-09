@@ -23,7 +23,7 @@ class Feeds extends Component {
                             src="https://img.travelawaits.com/quill/f/c/f/6/b/b/fcf6bb1ba5b6ccf979f1932366f5c53ad7c13745.jpg" />
                     </div>
                     <div className="emotion">
-                        <div class="emo-left">
+                        <div className="emo-left">
                             <span className="emo-left-heart"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" /></span>
                             <span className="emo-left-comment"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/comment.png" /></span>
                             <span className="emo-left-share"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/share.png" /></span>
