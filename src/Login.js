@@ -1,29 +1,15 @@
 import React, { Component } from 'react';
 import './Login.css';
+import LoginInput from './components/LoginInput';
 import logoImg from './img/logo_text.png';
-
-class LoginInput extends Component {
-    render() {
-        return (
-            <div className="login-input">
-                <input
-                    className="id"
-                    type="text"
-                    placeholder="전화번호, 사용자 이름 또는 이메일" />
-                <input
-                    className="pw"
-                    type="password"
-                    placeholder="비밀번호" />
-                <button className="login-btn">로그인</button>
-            </div>
-        );
-    }
-}
 
 class Login extends Component {
     constructor(props) {
-        super(props);
+        super(props)
 
+        this.state = {
+            
+        }
     }
 
     render() {
