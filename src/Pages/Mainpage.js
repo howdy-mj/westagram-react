@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Mainpage.css';
-import Nav from './components/Nav';
-import Feeds from './components/Feeds';
-import MainRight from './components/MainRight';
+import Nav from '../Components/Nav';
+import Feeds from './Feeds';
+import MainRight from './MainRight';
 
 class Mainpage extends Component {
 
