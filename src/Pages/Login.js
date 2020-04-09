@@ -8,6 +8,7 @@ class Login extends Component {
         super(props);
 
         this.state = {
+            // isInput: false,
             idValue: '',
             pwValue: '',
         }
@@ -26,6 +27,12 @@ class Login extends Component {
         })
     }
 
+    goMainPage = () => {
+        (this.state.idValue.length > 4 && this.state.pwValue.length > 4) ?
+        this.props.history.push('/main') :
+        this.props.history.push('./login')
+    }
+
     render() {
         return (
             <div>
@@ -41,6 +48,7 @@ class Login extends Component {
                             placeholder="전화번호, 사용자 이름 또는 이메일"
                             value={this.state.idValue}
                             onChange={this.handleIDInput}
+                            // isInput={this.state.isInput}
                         />
                         <input
                             className="pw"
@@ -48,12 +56,14 @@ class Login extends Component {
                             placeholder="비밀번호"
                             value={this.state.pwValue}
                             onChange={this.handlePWInput}
+                            // isInput={this.state.isInput}
                         />
                         <button
                             className={
                                 (this.state.idValue.length > 0 && this.state.pwValue.length > 0) ?
                                     "login-btn activate" : "login-btn"
                             }
+                            onClick={this.goMainPage}
                         >로그인</button>
                     </div>
 
@@ -66,4 +76,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default withRouter(Login);
