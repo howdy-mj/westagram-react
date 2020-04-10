@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import './Login.css';
+import './Login.scss';
 import logoImg from '../img/logo_text.png';
 
 class Login extends Component {
@@ -12,16 +12,14 @@ class Login extends Component {
             idValue: '',
             pwValue: '',
         }
-        this.handleIDInput = this.handleIDInput.bind(this);
-        this.handlePWInput = this.handlePWInput.bind(this);
     }
 
-    handleIDInput(e) {
+    handleIDInput = (e) => {
         this.setState({
             idValue: e.target.value,
         })
     }
-    handlePWInput(e) {
+    handlePWInput = (e) => {
         this.setState({
             pwValue: e.target.value,
         })
@@ -30,12 +28,16 @@ class Login extends Component {
     goMainPage = () => {
         (this.state.idValue.length > 4 && this.state.pwValue.length > 4) ?
         this.props.history.push('/main') :
-        this.props.history.push('./login')
+        alert('아이디와 비밀번호 모두 5자리 이상 적어주세요');
+        this.setState({
+            idValue: '',
+            pwValue: '',
+        })
     }
 
     render() {
         return (
-            <div>
+            <div className="Login">
                 <div className="login-container">
                     <div className="login-logo">
                         <img src={logoImg} />

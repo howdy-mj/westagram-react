@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import NewComment from './Newcomment';
 
 class FeedsComment extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            commentValue: ''
+            commentValue: '',
         }
     }
 
@@ -35,7 +36,7 @@ class FeedsComment extends Component {
                 <div className="comment-box">
                     <p><a>canon_mj</a><span>위워크에서 어쩌구 저쩌구</span></p>
                     <p><a>neceosecius</a><span>빨리 끝내고 싶다ㅏ</span></p>
-                    {/* <NewComment /> */}
+                    <NewComment />
                 </div>
                 <p className="comment-time">42분 전</p>
                 <div className="new-comment">
