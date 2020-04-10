@@ -3,6 +3,13 @@ import Story from './Stroy';
 import Recommend from './Recommend';
 
 class MainRight extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            myInfo: { name: 'wecode_bootcamp', korName: 'WeCode | 위코드' },
+        }
+    }
     render() {
         return (
 
@@ -10,8 +17,8 @@ class MainRight extends Component {
                 <div className="mine">
                     <img src="https://pbs.twimg.com/profile_images/1109389733912666112/XX55fTPf.jpg" />
                     <div className="mine-container">
-                        <p className="mine-name">wecode_bootcamp</p>
-                        <p className="mine-kor-name">WeCode | 위코드</p>
+                        <p className="mine-name">{this.state.myInfo.name}</p>
+                        <p className="mine-kor-name">{this.state.myInfo.korName}</p>
                     </div>
                 </div>
 

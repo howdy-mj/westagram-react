@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 
 class Recommend extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            recommend: [
+                { name: 'abcde', follow: 'ab_님이 팔로우합니다' },
+            ]
+        }
+    }
     render() {
         return (
             <div className="recommend-container">
@@ -12,8 +21,8 @@ class Recommend extends Component {
                     <img src="https://www.abc.net.au/news/image/10477576-3x2-940x627.jpg" />
                     <div className="recommend-info">
                         <div className="recomment-info-more">
-                            <p className="recommend-name">abcde</p>
-                            <p className="recommend-follow">ab_님이 팔로우합니다</p>
+                            <p className="recommend-name">{this.state.recommend[0].name}</p>
+                            <p className="recommend-follow">{this.state.recommend[0].follow}</p>
                         </div>
                     </div>
                     <div>

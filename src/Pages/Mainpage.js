@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './Mainpage.scss';
 import Nav from '../Components/Nav';
 import Feeds from './Feeds';
 import MainRight from './MainRight';
+import './Mainpage.scss';
 
 class Mainpage extends Component {
 

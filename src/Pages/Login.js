@@ -8,21 +8,28 @@ class Login extends Component {
         super(props);
 
         this.state = {
-            // isInput: false,
             idValue: '',
             pwValue: '',
         }
     }
 
-    handleIDInput = (e) => {
+    // handleIDInput = (e) => {
+    //     this.setState({
+    //         idValue: e.target.value,
+    //     })
+    // }
+    // handlePWInput = (e) => {
+    //     this.setState({
+    //         pwValue: e.target.value,
+    //     })
+    // }
+
+    handleChange = (e) => {
+        const {name, value} = e.target;
         this.setState({
-            idValue: e.target.value,
+            [name]: value, // 계산된 속성명
         })
-    }
-    handlePWInput = (e) => {
-        this.setState({
-            pwValue: e.target.value,
-        })
+        // console.log(e.target.name);
     }
 
     goMainPage = () => {
@@ -36,6 +43,8 @@ class Login extends Component {
     }
 
     render() {
+        const {idValue, pwValue} = this.state; // 비구조화 할당
+
         return (
             <div className="Login">
                 <div className="login-container">
@@ -48,21 +57,21 @@ class Login extends Component {
                             className="id"
                             type="text"
                             placeholder="전화번호, 사용자 이름 또는 이메일"
-                            value={this.state.idValue}
-                            onChange={this.handleIDInput}
-                            // isInput={this.state.isInput}
+                            value={idValue}
+                            onChange={this.handleChange}
+                            name="idValue"
                         />
                         <input
                             className="pw"
                             type="password"
                             placeholder="비밀번호"
-                            value={this.state.pwValue}
-                            onChange={this.handlePWInput}
-                            // isInput={this.state.isInput}
+                            value={pwValue}
+                            onChange={this.handleChange}
+                            name="pwValue"
                         />
                         <button
                             className={
-                                (this.state.idValue.length > 0 && this.state.pwValue.length > 0) ?
+                                (idValue.length > 0 && pwValue.length > 0) ?
                                     "login-btn activate" : "login-btn"
                             }
                             onClick={this.goMainPage}
