@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { isCompositeComponent } from 'react-dom/test-utils';
 // import NewComment from './Newcomment';
 
 class FeedsComment extends Component {
@@ -34,30 +35,38 @@ class FeedsComment extends Component {
 
     writeComment = (comment) => {
         const myName = 'wecode_bootcamp';
-        console.log(myName, comment);
-
+        this.state.comments_id = this.state.comments_id + 1;
+        let _newComments = Array.from(this.state.comments); // 현재 댓글들
+        _newComments.push({id:this.state.comments_id, name:myName, text:comment});
+        // console.log(_newComments);
         this.setState({
-            
+          comments: _newComments,
         })
-
     }
 
     deleteComment = (e) => {
-        console.dir(e.target.parentNode);
+        // console.dir(e.target.parentNode.id);
+        // debugger;
+        let _currentComments = Array.from(this.state.comments);
+        // console.log(_currentComments);
+        _currentComments = _currentComments.filter( (comments) => {
+            return comments.id != e.target.parentNode.id;
+        })
+        console.log(_currentComments);
 
-        // this.state.comments.filter( (str) => {
-        //     return str
-        // })
+        this.setState({
+            comments: _currentComments,
+        })
     }
 
     render() {
         return (
             <div className="comment-container">
                 <div className="comment-box">
-                    {this.state.comments.map( (comment, i) => {
+                    {this.state.comments.map( (comment) => {
                         return (
-                            <div className="all-comment">
-                                <div id={i}>
+                            <div className="all-comment" id={comment.id}>
+                                <div>
                                     <a>{comment.name}</a>
                                     <span>{comment.text}</span>
                                 </div>
