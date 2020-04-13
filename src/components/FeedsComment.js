@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import NewComment from './Newcomment';
 
 class FeedsComment extends Component {
     constructor(props) {
@@ -34,9 +33,11 @@ class FeedsComment extends Component {
 
     writeComment = (comment) => {
         const myName = 'wecode_bootcamp';
-        this.state.comments_id = this.state.comments_id + 1;
+        let comments_id = this.state.comments.length;
+        // console.log(comments_id);
+        comments_id = comments_id + 1;
         let _newComments = Array.from(this.state.comments); // 현재 댓글들
-        _newComments.push({id:this.state.comments_id, name:myName, text:comment});
+        _newComments.push({id:comments_id, name:myName, text:comment});
         // console.log(_newComments);
         this.setState({
           comments: _newComments,
@@ -51,7 +52,7 @@ class FeedsComment extends Component {
         _currentComments = _currentComments.filter( (comments) => {
             return comments.id != e.target.parentNode.id;
         })
-        console.log(_currentComments);
+        // console.log(_currentComments);
 
         this.setState({
             comments: _currentComments,
