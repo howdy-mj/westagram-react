@@ -13,18 +13,8 @@ class Login extends Component {
         }
     }
 
-    // handleIDInput = (e) => {
-    //     this.setState({
-    //         idValue: e.target.value,
-    //     })
-    // }
-    // handlePWInput = (e) => {
-    //     this.setState({
-    //         pwValue: e.target.value,
-    //     })
-    // }
-
     handleChange = (e) => {
+        console.log(e.target.value);
         const {name, value} = e.target;
         this.setState({
             [name]: value, // 계산된 속성명
