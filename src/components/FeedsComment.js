@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { isCompositeComponent } from 'react-dom/test-utils';
 // import NewComment from './Newcomment';
 
 class FeedsComment extends Component {

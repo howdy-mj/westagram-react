@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import './Login.scss';
-import logoImg from '../img/logo_text.png';
+import logoImg from '../../img/logo_text.png';
 
 class Login extends Component {
     constructor(props) {
